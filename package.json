@@ -1,0 +1,28 @@
+{
+  "name": "capturi-frontend-challenge",
+  "version": "1.0.0",
+  "description": "A coding challenge for potential hires",
+  "main": "index.js",
+  "repository": "git@github.com:capturi/frontend-challenges.git",
+  "author": "Stefan Loeschcke <stefan@loeschcke.dk>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "api",
+    "app",
+    "shared"
+  ],
+  "scripts": {
+    "start": "concurrently --kill-others 'npm:start:app' 'npm:start:server'",
+    "start:app": "yarn workspace app run start",
+    "start:server": "yarn workspace api run dev",
+    "build:shared": "yarn workspace shared build",
+    "postinstall": "yarn build:shared"
+  },
+  "devDependencies": {
+    "@types/node": "^12.20.45",
+    "concurrently": "^7.0.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  }
+}
