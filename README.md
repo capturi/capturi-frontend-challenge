@@ -1,4 +1,4 @@
-# Capturi frontend coding challenge
+# 🚀 Capturi frontend coding challenge
 
 ### [👉 Go to the challenge 👈](./CHALLENGE.md)
 
